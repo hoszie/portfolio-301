@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nick's Music Page</title>
+    <script id="music-template" type="text/x-handlebars-template">
+        <link rel="stylesheet" type="text/css" href="CSS/music.css">
+        <div id="my-music-template">
+                <img src="{{{image}}}" />
+                <h1>{{{title}}}</h1>
+                <h2>By {{composer}}</h2>
+                <p>{{{description}}}</p>
+                <a href="{{pieceUrl}}">Listen Here</a>
+            </div>
+    </script>
+</head>
+<body>
+
+    <h1 id="heading">MUSIC</h1>
+    <div id="music-box"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js" type="text/javascript" charset="utf-8"></script>   
+<script src="app.js"></script>   
+</body>
+</html>

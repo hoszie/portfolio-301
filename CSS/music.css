@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+
+#music-box {
+    background-color:white;
+    margin: auto;
+    width: 75%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#heading {
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 40px;
+}
