@@ -1,57 +1,21 @@
+/* Make everything percentages!!!!!! */
+/* Make everything in the header a block element or an inline block element and then use flex box around the header div?? */
+/* One main.css file and then on main do @import "the other CSS files"; */
+/* Link code pen hamburger on separate file and just say don't make it */
 
-header {
-    background-color: lightskyblue;
-    height: 250px;
-    padding-top: 0;
-}
-
-#nav-bar {      /*ul*/
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;      /* change to color and opacity */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: right;
-}
-
-.nb-icon {     /*a*/
-    display: block;
-    font-weight: bold;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
+@import "base.css";
+@import "media-query.css";
+@import "layout.css";
+@import "modules.css";
+@import "codepenburger.css";
 
 .nb-icon:hover {
-    color: black;
-    text-decoration: underline;
-}
-
-
-img {
-    width: 170px;
-    height: 220px;
-    border-radius: 180%;
-    display: block;
-    margin: auto;
-    margin-top: 50px;
-}
-
-aside {
-    position: fixed;
-    background-color: white;
-    max-width: 500px;
-    
-
+    text-decoration: none;
 }
 
 .sm-icon {
     display: block;
-    color: #17035F;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-align: center;
     padding: 14px;
@@ -89,12 +53,30 @@ aside {
 p {
     margin: 110px;
     margin-top: 20px;
+    text-align: center;
 }
 
+/* #home {
+    padding: 100px;
+    margin: 0 auto;
+    border: solid black 1px;
+    width: 50%;
+    margin-bottom: 50px;
 
-/* ////////////////////// ///////// */
+
+}
+
+#about {
+    padding: 100px;
+    margin: 0 auto;
+    border: solid black 1px;
+    width: 50%;
+} */
 
 
+                            /* ////////////////////// ///////// */
+
+/* 
 .navigation {
     width: 40%;
     position: fixed;
@@ -214,4 +196,4 @@ p {
     margin:auto;
     padding: 16px;
     font-size:30px;
-}
+} */
