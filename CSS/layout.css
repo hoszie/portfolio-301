@@ -9,6 +9,16 @@
 #nav-bar {
     padding: 1%;
     margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+}
+
+#header-div:hover ul {
+    visibility: visible;
+
 }
 
 .icon-menu {
@@ -25,6 +35,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        visibility: visible;
+    }
+
+    .icon-menu {
+        visibility: hidden;
     }
 
 } 
@@ -36,6 +51,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        visibility: visible;
     }
  
     #header-div {
@@ -47,7 +63,9 @@
         padding: .4em;
     }
 
+    .icon-menu {
+        visibility: hidden;
+    }
+
 
 }
-
-/* Absolute, float right float top -- hamburger guy*/

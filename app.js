@@ -40,17 +40,17 @@ function Pieces (musicPiecesObj) {
     this.image = musicPiecesObj.image;
 }
  
-Pieces.prototype.toHtml = function() {
-    var theTemplateScript = $("#music-template").html();
-    var theTemplate = Handlebars.compile(theTemplateScript);
-    return theTemplate(this);
-}
+// Pieces.prototype.toHtml = function() {
+//     var theTemplateScript = $("#music-template").html();
+//     var theTemplate = Handlebars.compile(theTemplateScript);
+//     return theTemplate(this);
+// }
 
-musicPiecesObjArr.forEach(function(musicObject) {
-    piecesArr.push(new Pieces(musicObject));
-});
+// musicPiecesObjArr.forEach(function(musicObject) {
+//     piecesArr.push(new Pieces(musicObject));
+// });
 
-piecesArr.forEach(function(piecesArr) {
-    $('#music-box').append(piecesArr.toHtml());
-});
+// piecesArr.forEach(function(piecesArr) {
+//     $('#music-box').append(piecesArr.toHtml());
+// });
 
