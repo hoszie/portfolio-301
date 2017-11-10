@@ -11,4 +11,14 @@ body {
     color: black;
 }
 
-icon-
+.sm-item {
+    padding: 0px;
+}
+
+.sm-icon {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
