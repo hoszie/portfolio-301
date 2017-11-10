@@ -12,3 +12,21 @@
 .nb-icon:hover {
     text-decoration: underline;
 }
+
+.sm-icon {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#git-icon {
+    border: black solid 1px;
+    background-color: rgb(87, 113, 201);
+}
+
+.template {
+    display: none;
+}
+
+#articles {
+    text-align: center;
+} 

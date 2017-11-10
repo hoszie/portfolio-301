@@ -3,47 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">         
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title>Nick's Portfolio Page</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylessheet" href="CSS/demo.css">
     <link rel="stylesheet" type="text/css" href="CSS/icon-style.css">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <!-- <script id="music-template" type="text/x-handlebars-template">
+        <link rel="stylesheet" type="text/css" href="CSS/music.css">
+        <div id="my-music-template">
+                <img src="{{{image}}}" />
+                <h1>{{{title}}}</h1>
+                <h2>By {{composer}}</h2>
+                <p>{{{description}}}</p>
+                <a href="{{pieceUrl}}">Listen Here</a>
+            </div>
+    </script> -->
 </head>
 <body>
     <header>
         <div id="header-div">
             <span class="icon-menu"></span>
             <ul id="nav-bar">
-                <li class="nb-item"><a class="nb-icon" href="#">Home</a></li>
-                <li class="nb-item"><a class="nb-icon" href="#">Contact</a></li>
-                <li class="nb-item"><a class="nb-icon" href="#">Music</a></li>
-                <li class="nb-item"><a class="nb-icon" href="#">About</a></li>
+                <li class="nb-item"><a class="nb-icon" id="one" href="#">Home</a></li>
+                <li class="nb-item"><a class="nb-icon" id="two "href="#">Contact</a></li>
+                <li class="nb-item"><a class="nb-icon" id="three" href="#">Music</a></li>
+                <li class="nb-item"><a class="nb-icon" id="four" href="#">About</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- <main>
-    <section>
+    <main>
         <aside>
             <ul id="social-media">
-                <li class="sm-item"><a class="sm-icon fa fa-github" href="https://github.com/hoszie" target="_blank">GitHub</a></li>
+                <li class="sm-item"><a class="sm-icon fa fa-github" id="git-icon" href="https://github.com/hoszie" target="_blank"></a></li>
                 <li class="sm-item"><a class="sm-icon fa fa-linkedin" href="https://www.linkedin.com/in/nick-hoszko-5ba674139/" target="_blank"></a></li>
                 <li class="sm-item"><a class="sm-icon fa fa-facebook" href="https://www.facebook.com/nick.hoszko" target="_blank"></a></li>
             </ul>
         </aside>
-    </section>
-    <section>
-        <div id="home"><a name="home"></a>
-            <p>This is my home paragraph.</p>
-        </div>
-        <div id="about"><a name="about"></a>
-            <p>This is a paragraph about me.</p>
-        </div>
-    </section>
+        <section id="articles">
+            <article class="template">
+                <div id="my-music-template">
+                    <img src="" />
+                    <h1>Title</h1>
+                    By<h2>Composer</h2>
+                    <p id="description"></p>
+                    <a href="">Listen Here</a>
+                    Recorded <time pubdate datetime="2000-01-01">Recorded Time</time>
+                </div>
+            </article>
+        </section>
     </main>
                 
-    <! <footer>
+    <!-- <footer>
 
             <div id="topNav" class="navigation">
                     <span id="closebtn" onclick="navToggle()">
@@ -68,7 +80,10 @@
 
     </footer> -->
     <!-- <a href="#top">Top</a> -->
-    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js" type="text/javascript" charset="utf-8"></script> 
+    <script type="text/javascript" src="scripts/arrayObjects.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>
 
