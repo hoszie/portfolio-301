@@ -17,11 +17,12 @@ Pieces.prototype.toHtml = function() {
     
     $newPieces.removeClass('template');
     $newPieces.find('h1').html(this.title);
-    $newPieces.find('#description').html(this.description);
+    $newPieces.find('.description').html(this.description);
     $newPieces.find('h2').text(this.composer);
-    $newPieces.find('a').attr('href', this.pieceUrl);
+    $newPieces.find('a.listen-on').attr('href', this.pieceUrl);
+    $newPieces.find('a.more').attr('data-content', this.description);
     $newPieces.find('img').attr('src', this.image);
-    $newPieces.find('time').attr('datetime', this.recorded).text('about ' + parseInt((new Date() - new Date(this.recorded))/60/60/24/1000) + ' days ago');
+    $newPieces.find('time').attr('datetime', this.recorded).text('Recorded about ' + parseInt((new Date() - new Date(this.recorded))/60/60/24/1000) + ' days ago');
     $newPieces.append('<hr>');
     return $newPieces;
   };
@@ -34,15 +35,40 @@ musicPiecesObjArr.forEach(function(musicObject) {
      piecesArr.push(new Pieces(musicObject));
 });
 
-piecesArr.forEach(function(article) {
-    $('#articles').append(article.toHtml());
-  });
+piecesArr.forEach(function(piece) {
+  $('#music-articles').append(piece.toHtml());
+});
+
+          /////////////    NAV BAR    /////////quick suggestions delay////////////
+ 
+// $('.nav-sections').hide();         
+
+// $('data-content="home-article').on('click', function() {
+//   $('.nav-sections').hide();
+//   $('#home-article').show();
+// });
+
+// $('#two').on('click', function() {
+//   $('.nav-sections').hide();
+//   $('#contact-article').show();
+// });
+
+// $('#three').on('click', function() {
+//   $('.nav-sections').hide();
+//   $('#music-articles').show();
+//   piecesArr.forEach(function(article) {
+//       $('#music-articles').append(article.toHtml());
+//     })
+// });
+
+// $('#four').on('click', function() {
+//   $('.nav-sections').hide();
+//   $('#about-article').show();
+// });
 
 
 
 
-
-  
 ///////////// HANDLEBARS //////////////////////
 // Pieces.prototype.toHtml = function() {
 //     var theTemplateScript = $("#music-template").html();

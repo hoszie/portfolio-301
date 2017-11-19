@@ -1,9 +1,9 @@
 body {
-    background-color: beige;
+    background-color: rgb(160, 194, 221);
 }
 
 #header-div {
-    background-color: grey;
+    background-color: rgb(92, 30, 30);
     border-radius: 4px;
 }
 
