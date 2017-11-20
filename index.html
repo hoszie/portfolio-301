@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylessheet" href="CSS/demo.css">
     <link rel="stylesheet" type="text/css" href="CSS/icon-style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <!-- <script id="music-template" type="text/x-handlebars-template">
-        <link rel="stylesheet" type="text/css" href="CSS/music.css">
+    <link rel="stylesheet" type="text/css" href="CSS/base.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Spectral+SC" rel="stylesheet">
+    <script id="music-template" type="text/x-handlebars-template">
         <div id="my-music-template">
                 <img src="{{{image}}}" />
                 <h1>{{{title}}}</h1>
                 <h2>By {{composer}}</h2>
-                <p>{{{description}}}</p>
-                <a href="{{pieceUrl}}">Listen Here</a>
+                <a href="#" class="more" data-content="paragraph">More &rarr;</a><br />
+                <section class="description">{{{description}}}</section>
+                <p class="performance">{{performance}}</p>
+                <a class="listen-on" href="{{pieceUrl}}">Listen Here</a>
+                <br>
+                <br>
+                <br>
             </div>
-    </script> -->
+    </script>
 </head>
 <body>
     <header>
@@ -42,7 +47,7 @@
             </ul>
         </aside>
         <section id="music-articles" class="nav-sections">
-            <article class="template">
+            <!-- <article class="template">
                 <div id="my-music-template">
                     <img src="" />
                     <h1>Title</h1>
@@ -52,7 +57,7 @@
                     <a href="" class="listen-on">Listen Here</a>
                     <time pubdate datetime="2000-01-01">Recorded Time</time>
                 </div>
-            </article>
+            </article> -->
         </section>
         <section id="home-article" class="nav-sections">
             <div id="home-div">

@@ -10,80 +10,60 @@ function Pieces (musicPiecesObj) {
     this.pieceUrl = musicPiecesObj.pieceUrl;
     this.image = musicPiecesObj.image;
     this.recorded = musicPiecesObj.recorded;
-}
-/////////////////// DOM RENDER TEMPLATE ///////////////
-Pieces.prototype.toHtml = function() {
-    var $newPieces = $('article.template').clone();
     
-    $newPieces.removeClass('template');
-    $newPieces.find('h1').html(this.title);
-    $newPieces.find('.description').html(this.description);
-    $newPieces.find('h2').text(this.composer);
-    $newPieces.find('a.listen-on').attr('href', this.pieceUrl);
-    $newPieces.find('a.more').attr('data-content', this.description);
-    $newPieces.find('img').attr('src', this.image);
-    $newPieces.find('time').attr('datetime', this.recorded).text('Recorded about ' + parseInt((new Date() - new Date(this.recorded))/60/60/24/1000) + ' days ago');
-    $newPieces.append('<hr>');
-    return $newPieces;
-  };
+}
+
+///////////// HANDLEBARS    quick suggestions delay //////////////////////
+
+Pieces.prototype.toHtml = function() {
+    var theTemplateScript = $("#music-template").html();
+    var theTemplate = Handlebars.compile(theTemplateScript);
+
+    this.daysAgo = parseInt((new Date() - new Date(this.recorded))/60/60/24/1000);
+    this.performance = `The ${this.composer} was recorded roughly ${this.daysAgo} days ago in Melbourne, Australia.`
+    return theTemplate(this);
+}
 
 musicPiecesObjArr.sort(function(a,b) {
-    return (new Date(b.recorded)) - (new Date(a.recorded));
-  });
+  return (new Date(b.recorded)) - (new Date(a.recorded));
+});
 
 musicPiecesObjArr.forEach(function(musicObject) {
-     piecesArr.push(new Pieces(musicObject));
+    piecesArr.push(new Pieces(musicObject));
 });
 
-piecesArr.forEach(function(piece) {
-  $('#music-articles').append(piece.toHtml());
-});
+// $('[data-content="music-articles"]').on('click', function(){
+    piecesArr.forEach(function(piecesArr) {
+        $('#music-articles').append(piecesArr.toHtml());
+    });
+// 
 
-          /////////////    NAV BAR    /////////quick suggestions delay////////////
- 
-// $('.nav-sections').hide();         
-
-// $('data-content="home-article').on('click', function() {
-//   $('.nav-sections').hide();
-//   $('#home-article').show();
-// });
-
-// $('#two').on('click', function() {
-//   $('.nav-sections').hide();
-//   $('#contact-article').show();
-// });
-
-// $('#three').on('click', function() {
-//   $('.nav-sections').hide();
-//   $('#music-articles').show();
-//   piecesArr.forEach(function(article) {
-//       $('#music-articles').append(article.toHtml());
-//     })
-// });
-
-// $('#four').on('click', function() {
-//   $('.nav-sections').hide();
-//   $('#about-article').show();
-// });
-
-
-
-
-///////////// HANDLEBARS //////////////////////
+/////////////////// DOM RENDER TEMPLATE ///////////////
 // Pieces.prototype.toHtml = function() {
-//     var theTemplateScript = $("#music-template").html();
-//     var theTemplate = Handlebars.compile(theTemplateScript);
-//     return theTemplate(this);
-// }
+//     var $newPieces = $('article.template').clone();
+    
+//     $newPieces.removeClass('template');
+//     $newPieces.find('h1').html(this.title);
+//     $newPieces.find('.description').html(this.description);
+//     $newPieces.find('h2').text(this.composer);
+//     $newPieces.find('a.listen-on').attr('href', this.pieceUrl);
+//     $newPieces.find('a.more').attr('data-content', this.description);
+//     $newPieces.find('img').attr('src', this.image);
+//     $newPieces.find('time').attr('datetime', this.recorded).text('Recorded about ' + parseInt((new Date() - new Date(this.recorded))/60/60/24/1000) + ' days ago');
+//     $newPieces.append('<hr>');
+//     return $newPieces;
+//   };
+
+// musicPiecesObjArr.sort(function(a,b) {
+//     return (new Date(b.recorded)) - (new Date(a.recorded));
+//   });
 
 // musicPiecesObjArr.forEach(function(musicObject) {
-//     piecesArr.push(new Pieces(musicObject));
+//      piecesArr.push(new Pieces(musicObject));
 // });
 
-// $('#three').on('click', function(){
-//     piecesArr.forEach(function(piecesArr) {
-//         $('#music-box').append(piecesArr.toHtml());
-//     });
+// piecesArr.forEach(function(piece) {
+//   $('#music-articles').append(piece.toHtml());
 // });
-
+ 
 

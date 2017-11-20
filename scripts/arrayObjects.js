@@ -13,7 +13,7 @@ const musicPiecesObjArr = [
     },
 
     {
-        title: 'Quintet for Piano & Winds in E<sup>b</sup> major, K.452',
+        title: 'Quintet for Piano & Winds in E<span style="font-family:New Times Roman"><sup>b</sup></span> major, K.452',
         composer: 'W.A. Mozart',
         description: '<p class="inlinePara">The Quintet in E flat major for Piano and Winds, K. 452, was completed by Wolfgang Amadeus Mozart on March 30, 1784 and premiered two days later at the Imperial and Royal National Court Theater in Vienna. Shortly after the premiere, Mozart wrote to his father that "I myself consider it to be the best thing I have written in my life." It is scored for piano, oboe, clarinet, horn and bassoon.</p>',
         pieceUrl: 'https://soundcloud.com/user-398697111/sets/quintet-for-piano-winds-in-eb-major-k452',
