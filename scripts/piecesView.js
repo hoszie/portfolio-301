@@ -25,5 +25,5 @@ piecesView.truncate = function () {
 
     $(document).ready(function(){
     piecesView.handleNav();
-    piecesView.truncate();
+    // piecesView.truncate();
 })
