@@ -12,11 +12,11 @@ piecesView.handleNav = function() {
     };
 
 piecesView.truncate = function () {
-    $('.description, .listen-on, time').hide();
+    $('.description, .listen-on, .performance').hide();
     $('a.more').on('click', function(e) {
         e.preventDefault();
         if ($(this).text() === 'More →') {
-            $(this).parent().find('.description, .listen-on, time').fadeIn();
+            $(this).parent().find('.description, .listen-on, .performance').fadeIn();
         } 
     });
 };
@@ -25,5 +25,5 @@ piecesView.truncate = function () {
 
     $(document).ready(function(){
     piecesView.handleNav();
-    piecesView.truncate();
+    // piecesView.truncate();
 })
