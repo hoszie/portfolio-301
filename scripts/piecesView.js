@@ -21,9 +21,14 @@ piecesView.truncate = function () {
     });
 };
 
-
+piecesView.initMusicPage = function() {
+Pieces.all.forEach(function(indiviualPiece) {
+    $('#music-articles').append(indiviualPiece.toHtml());
+});
+piecesView.truncate();
+};
 
     $(document).ready(function(){
     piecesView.handleNav();
-    // piecesView.truncate();
+    Pieces.fetchAll();
 })
