@@ -3,50 +3,69 @@
 ///////////////////////// MUSIC CONSTRUCTOR FUNCTION ///////////////////////
 var piecesArr = [];
 
-function Pieces(musicPiecesObj) {
+function Pieces (musicPiecesObj) {
     this.title = musicPiecesObj.title;
     this.composer = musicPiecesObj.composer;
     this.description = musicPiecesObj.description;
     this.pieceUrl = musicPiecesObj.pieceUrl;
     this.image = musicPiecesObj.image;
     this.recorded = musicPiecesObj.recorded;
-
+    
 }
+
+Pieces.all = [];
 
 ///////////// HANDLEBARS    quick suggestions delay //////////////////////
 
-Pieces.prototype.toHtml = function () {
+Pieces.prototype.toHtml = function() {
     var theTemplateScript = $("#music-template").html();
     var theTemplate = Handlebars.compile(theTemplateScript);
 
-    this.daysAgo = parseInt((new Date() - new Date(this.recorded)) / 60 / 60 / 24 / 1000);
+    this.daysAgo = parseInt((new Date() - new Date(this.recorded))/60/60/24/1000);
     this.performance = `The ${this.composer} was recorded roughly ${this.daysAgo} days ago.`
     return theTemplate(this);
 }
 
-/**
- * Get music pieces from .json file
- */
-$.getJSON('/data/musicpieces.json')
-    .then(function (jsonData) {
-        jsonData.sort(function (a, b) {
-            return (new Date(b.recorded)) - (new Date(a.recorded));
-        });
 
-        jsonData.forEach(function (musicObject) {
-            piecesArr.push(new Pieces(musicObject));
-        });
+Pieces.loadAll = function(musicPiecesObjArr) {
+musicPiecesObjArr.sort(function(a,b) {
+  return (new Date(b.recorded)) - (new Date(a.recorded));
+});
 
-        // $('[data-content="music-articles"]').on('click', function(){
-        piecesArr.forEach(function (piecesArr) {
-            $('#music-articles').append(piecesArr.toHtml());
+musicPiecesObjArr.forEach(function(musicObject) {
+    Pieces.all.push(new Pieces(musicObject));
+});
+};
+
+    // piecesArr.forEach(function(piecesArr) {
+    //     $('#music-articles').append(piecesArr.toHtml());
+    // });
+
+    
+
+ ///////////////////////            JSON CALL           //////////////////////
+ 
+ 
+Pieces.fetchAll = function() {
+    if (localStorage.rawData) {
+        Pieces.loadAll(JSON.parse(localStorage.getItem('rawData')));
+        piecesView.initMusicPage();
+    } else {
+        $.getJSON('data/musicpieces.json', function(data) {
+            console.log(data);
+            localStorage.setItem('rawData', JSON.stringify(data));
+            Pieces.loadAll(data);
         });
-        piecesView.truncate();
-        // 
-    })
-    .catch(function (xhr, message, status) {
-        alert('message');
-    })
+        piecesView.initMusicPage();
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -54,7 +73,7 @@ $.getJSON('/data/musicpieces.json')
 /////////////////// DOM RENDER TEMPLATE ///////////////
 // Pieces.prototype.toHtml = function() {
 //     var $newPieces = $('article.template').clone();
-
+    
 //     $newPieces.removeClass('template');
 //     $newPieces.find('h1').html(this.title);
 //     $newPieces.find('.description').html(this.description);
@@ -78,5 +97,5 @@ $.getJSON('/data/musicpieces.json')
 // piecesArr.forEach(function(piece) {
 //   $('#music-articles').append(piece.toHtml());
 // });
-
+ 
 
