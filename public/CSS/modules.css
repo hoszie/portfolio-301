@@ -1,0 +1,31 @@
+#nav-bar {      /*ul*/
+    list-style-type: none;
+    background-color: transparent;
+}
+
+.nb-icon {                      /*a*/
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}  
+
+.nb-icon:hover {
+    text-decoration: underline;
+}
+
+.sm-icon {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#git-icon {
+    background-color: rgb(87, 113, 201);
+}
+
+.template {
+    display: none;
+}
+
+#music-articles {
+    text-align: center;
+} 

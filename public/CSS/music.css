@@ -1,0 +1,19 @@
+body {
+    background-color: beige;
+}
+
+#music-box {
+    background-color:rgba(90, 141, 199, 0.144);
+    margin: auto;
+    width: 75%;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+#heading {
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 40px;
+}
