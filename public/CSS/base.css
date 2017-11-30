@@ -1,0 +1,44 @@
+@import "style.css";
+@import "media-query.css";
+@import "layout.css";
+@import "modules.css";
+@import "codepenburger.css";
+
+body {
+    background-color: rgb(160, 194, 221);
+    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Spectral SC', serif;
+}
+
+#header-div {
+    background-color: rgb(92, 30, 30);
+    border-radius: 4px;
+}
+
+.nb-icon {              /*a*/
+    color: black;
+}
+
+.sm-item {
+    padding: 0px;
+}
+
+.sm-icon {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+
+p {
+    font-size: 1.333em;
+}
+
+h1 {
+    font-size: 2.369em;
+}
+
+h2 {
+    font-size: 1.777em;
+}

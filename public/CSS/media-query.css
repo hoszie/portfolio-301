@@ -1,0 +1,34 @@
+
+
+
+/* @media screen and (max-width: 900px) and (min-width: 650px) {
+
+    .nb-icon {
+        color: black;
+        
+    }
+}
+
+@media screen and (min-width: 900px) {
+    
+    .nb-icon {
+        font-size: 36px;
+        
+    }
+    #nav-bar {
+        max-height: 250px;
+        
+    }
+    img {
+        height: 200px;
+        width: 150px;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+
+    a {
+        ??
+    }
+} */
