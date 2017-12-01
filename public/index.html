@@ -7,7 +7,7 @@
     <title>Nick's Portfolio Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylessheet" href="CSS/demo.css">
-    <link rel="stylesheet" type="text/css" href="CSS/icon-style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/CSS/icon-style.css">
     <link rel="stylesheet" type="text/css" href="CSS/base.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Spectral+SC" rel="stylesheet">
     <script id="music-template" type="text/x-handlebars-template">
@@ -30,10 +30,10 @@
         <div id="header-div">
             <span class="icon-menu"></span>
             <ul id="nav-bar">
-                <li class="nb-item" data-content="home-article"><a class="nb-icon" href="#">Home</a></li>
-                <li class="nb-item" data-content="contact-article"><a class="nb-icon" href="#">Contact</a></li>
-                <li class="nb-item" data-content="music-articles"><a class="nb-icon" href="#">Music</a></li>
-                <li class="nb-item" data-content="about-article"><a class="nb-icon"href="#">About</a></li>
+                <li class="nb-item" data-content="home-article"><a class="nb-icon" href="/">Home</a></li>
+                <li class="nb-item" data-content="contact-article"><a  class="nb-icon" href="/contact">Contact</a></li>
+                <li class="nb-item" data-content="music-articles"><a  class="nb-icon" href="/music">Music</a></li>
+                <li class="nb-item" data-content="about-article"><a class="nb-icon"href="/about">About</a></li>
             </ul>
         </div>
     </header>
@@ -103,8 +103,11 @@
     <!-- <a href="#top">Top</a> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js" type="text/javascript" charset="utf-8"></script> 
-    <script type="text/javascript" src="scripts/piecesView.js"></script>
-    <script type="text/javascript" src="scripts/arrayObjects.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script type="text/javascript" src="scripts/controllers/controller.js"></script>
+    <script type="text/javascript" src="scripts/controllers/route.js"></script>
+    <script type="text/javascript" src="scripts/views/piecesView.js"></script>
+    <!-- <script type="text/javascript" src="scripts/arrayObjects.js"></script> -->
     <script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>
