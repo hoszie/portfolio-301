@@ -20,7 +20,7 @@ piecesView.initMusicPage = function() {
 };
 
 $(document).ready(function(){
-    piecesView.handleNav();
+
     Pieces.fetchAll();
 })
 
@@ -31,12 +31,12 @@ $(document).ready(function(){
 
 
 
-////////////    DELETE          /////////
-piecesView.handleNav = function() {
-$('#nav-bar').on('click', '.nb-item', function() {
-var selectedTab = '#' + $(this).attr('data-content');           /////// ??
-$('.nav-sections').hide();
-$(selectedTab).show();
-});
-$('#nav-bar .nb-item:first').click();
-};
+// ////////////    DELETE          /////////
+// piecesView.handleNav = function() {
+// $('#nav-bar').on('click', '.nb-item', function() {
+// var selectedTab = '#' + $(this).attr('data-content');           /////// ??
+// $('.nav-sections').hide();
+// $(selectedTab).show();
+// });
+// $('#nav-bar .nb-item:first').click();
+// };
