@@ -37,15 +37,8 @@ musicPiecesObjArr.forEach(function(musicObject) {
 });
 };
 
-    // piecesArr.forEach(function(piecesArr) {
-    //     $('#music-articles').append(piecesArr.toHtml());
-    // });
+///////////////////////            JSON CALL           //////////////////////
 
-    
-
- ///////////////////////            JSON CALL           //////////////////////
- 
- 
 Pieces.fetchAll = function() {
     if (localStorage.rawData) {
         Pieces.loadAll(JSON.parse(localStorage.getItem('rawData')));
@@ -72,30 +65,35 @@ Pieces.fetchAll = function() {
 
 /////////////////// DOM RENDER TEMPLATE ///////////////
 // Pieces.prototype.toHtml = function() {
-//     var $newPieces = $('article.template').clone();
+    //     var $newPieces = $('article.template').clone();
     
-//     $newPieces.removeClass('template');
-//     $newPieces.find('h1').html(this.title);
-//     $newPieces.find('.description').html(this.description);
-//     $newPieces.find('h2').text(this.composer);
-//     $newPieces.find('a.listen-on').attr('href', this.pieceUrl);
-//     $newPieces.find('a.more').attr('data-content', this.description);
-//     $newPieces.find('img').attr('src', this.image);
-//     $newPieces.find('time').attr('datetime', this.recorded).text('Recorded about ' + parseInt((new Date() - new Date(this.recorded))/60/60/24/1000) + ' days ago');
-//     $newPieces.append('<hr>');
-//     return $newPieces;
-//   };
-
-// musicPiecesObjArr.sort(function(a,b) {
-//     return (new Date(b.recorded)) - (new Date(a.recorded));
-//   });
-
-// musicPiecesObjArr.forEach(function(musicObject) {
-//      piecesArr.push(new Pieces(musicObject));
-// });
-
-// piecesArr.forEach(function(piece) {
-//   $('#music-articles').append(piece.toHtml());
-// });
- 
-
+    //     $newPieces.removeClass('template');
+    //     $newPieces.find('h1').html(this.title);
+    //     $newPieces.find('.description').html(this.description);
+    //     $newPieces.find('h2').text(this.composer);
+    //     $newPieces.find('a.listen-on').attr('href', this.pieceUrl);
+    //     $newPieces.find('a.more').attr('data-content', this.description);
+    //     $newPieces.find('img').attr('src', this.image);
+    //     $newPieces.find('time').attr('datetime', this.recorded).text('Recorded about ' + parseInt((new Date() - new Date(this.recorded))/60/60/24/1000) + ' days ago');
+    //     $newPieces.append('<hr>');
+    //     return $newPieces;
+    //   };
+    
+    // musicPiecesObjArr.sort(function(a,b) {
+        //     return (new Date(b.recorded)) - (new Date(a.recorded));
+        //   });
+        
+        // musicPiecesObjArr.forEach(function(musicObject) {
+            //      piecesArr.push(new Pieces(musicObject));
+            // });
+            
+            // piecesArr.forEach(function(piece) {
+                //   $('#music-articles').append(piece.toHtml());
+                // });
+                
+                
+                
+                
+                    // piecesArr.forEach(function(piecesArr) {
+                    //     $('#music-articles').append(piecesArr.toHtml());
+                    // });
